@@ -217,6 +217,7 @@ https://github.com/renan-asantos/tutorial-evoluindo-sistema
 # Configuração replit
 
 (inserir imagem do replit com projeto clonado)
+(lembrar de alterar arquivo .replit)
 
 ---
 
@@ -268,16 +269,34 @@ uv é uma ferramenta lançada esse ano e está em constante desenvolvimento
 
 # Instalar dependências
 
-![w:1000 center](imagens/poetry-commands.png)
+![w:900 center](imagens/poetry-commands.png)
 
 ---
 
-# Subir o projeto
+# Rodando o projeto
 
-- Subir o projeto (comando sei la)
-- Bater na url do /docs, ver o swagger e chamar um dos endpoints com sucesso
-- então é isso, já ta pronto e funcional, ta fazendo sua atividade fim
+- Configurar o banco
+```
+alembic upgrade head
+alembic revision --autogenerate -m "mensagem de criação"
+```
+- Rodar o projeto
+```
+fastapi dev src/app.py
+```
+
+AVISAR SOBRE LIMITE REPLIT
+
+---
+
+# Rodando o projeto
+
+- Acessar /docs, ver o swagger e chamar um dos endpoints com sucesso (cadastrar um filme e um genero e retornar eles)
+
+<!--
+- então é isso, já ta pronto e funcional, fazendo sua atividade fim
 - agora vamos melhorar as "bordas" dele
+-->
 
 ---
 
