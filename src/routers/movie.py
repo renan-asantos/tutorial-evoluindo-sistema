@@ -49,6 +49,7 @@ def read_movies(
     session: Session = Depends(get_session)
 ):
     if movie := get_one(session, Movie, id):
+        a = 1
         return movie
 
     raise HTTPException(HTTPStatus.NOT_FOUND, detail='Movie not found')

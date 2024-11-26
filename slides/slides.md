@@ -547,15 +547,35 @@ Assim, precisamos de logs
 
 # Ruff
 
-(carbon install ruff dev)
-
+![w:750 center](imagens/ruff-format.png)
 
 ---
 
-# Análise estática (linters)
+# Análise estática
 
-- O que são?
-- No que contribuem para o nosso sistema?
+- Nosso código pode conter diversos problemas como:
+  - Erros de sintaxe
+  - Potenciais problemas
+    - Nomes duplicados
+    - Nomes ruins
+  - Códigos complexos
+  - Violações de convenções (PEP-8)
+
+---
+
+# Análise estática
+
+- Para mitigar essas questões existem os linters
+  - Flake8: pep8
+  - pylint: Padronização de convenções
+  - bandit: Problemas de segurança
+  - Radon: complexidade de código
+
+---
+
+# Ruff
+
+
 
 ---
 
