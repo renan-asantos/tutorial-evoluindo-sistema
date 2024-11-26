@@ -325,17 +325,34 @@ AVISAR SOBRE LIMITE REPLIT
 
 # Documentação
 
-Para poder documentar o sistema, é bom entender minimamente o que ele faz
+- Quando não sabemos algo de algum projeto ou biblioteca vamos na documentação dela
+  - fastapi, django, requests...
+- Criar documentações é uma forma de repassar conhecimento
+- A boa formatação da documentação ajuda nesse repasse
 
-(Ana explica explica minimamente o que o projeto faz e quais os endpoints, como o banco está estruturado etc)
+<!--
+Muito mais para bibliotecas do que sistemas web
+mas é um bom conhecimento para dizer que já fez um dia
+-->
 
 ---
 
 # Documentação
 
+![w:1000 center](imagens/mkdocs-home.png)
+
+---
+
+# Documentação
+
+![w:800 center](imagens/mkdocs-init.png)
+
+---
+
 (gráfico de visualizacao do banco se der)
-acho que da pra meter um mkdocs simples em, ver live do du (https://www.youtube.com/live/O3bs4JtHrow) minuto 1h35
-Meter mkdocs
+Para poder documentar o sistema, é bom entender minimamente o que ele faz
+
+(Ana explica explica minimamente o que o projeto faz e quais os endpoints, como o banco está estruturado etc)
 
 ---
 
