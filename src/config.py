@@ -11,5 +11,4 @@ class Settings(BaseSettings):
     )
     DATABASE_URL: str = 'sqlite:///fastapi_demo.db'
 
-
 settings = Settings()

@@ -1,4 +1,5 @@
 from http import HTTPStatus
+import os
 
 from fastapi import APIRouter, Depends, HTTPException
 from sqlalchemy.orm import Session
@@ -20,11 +21,12 @@ router = APIRouter(prefix='/movie', tags=['movies'])
 @router.post(
     "/", status_code=HTTPStatus.CREATED, response_model=MovieOutSchema
 )
-def create_movie(
+def CreateMovie(
     movie: MovieInSchema,
     session: Session = Depends(get_session),
 ):
     if movie := create(session, Movie, movie):
+        SECRET_KEY = "OLA"
         return movie
     raise HTTPException(HTTPStatus.BAD_REQUEST, detail='Movie already exists')
 
