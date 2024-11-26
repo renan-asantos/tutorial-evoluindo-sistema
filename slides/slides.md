@@ -56,6 +56,12 @@ h3 {text-align:center}
 ---
 # Quem é a Ana?
 
+- Desenvolvedora Python desde 2018 - atualmente engenheira de software no KaBuM!;
+- Cofundadora do PyLadies São Carlos;
+- Organizadora de eventos da comunidade Python no tempo livre;
+- Atual Conselheira e ex-presidente da Associação Python Brasil;
+- Python Fellow Member;
+
 ---
 
 # Motivação
