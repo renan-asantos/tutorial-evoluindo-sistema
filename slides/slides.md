@@ -29,14 +29,6 @@ h3 {text-align:center}
 ### Ana Dulce
 
 ---
-
-# Quem é o Renan?
-
-- (auto descrição)
-
-![bg right:33%](imagens/eu.jpeg)
-
----
 # Quem é o Renan?
 
 - Bacharel em Física
@@ -103,7 +95,7 @@ Isso que vamos fazer juntos no dia de hoje
 
 <!--
 Primeiro de tudo queríamos deixar claro alguns alinhamentos iniciais:
-- aplicações web
+- aplicações web (mas algumas coisas podem ser usadas fora)
 - não é verdade absoluta, vamos apresentar uma forma de fazer, existem muitas outras
 - o que essa oficina não vai abordar
   - como criar api: como dito, queremos saber o que ocorre DEPOIS de criada a API
@@ -170,11 +162,13 @@ h1 {font-size: 100px; text-align:center;margin-top:200px;}
 
 # Precisamos de um projeto para evoluir...
 
-- Para essa oficina vamos usar a base do projeto que foi feito ontem na oficina de FastAPI da Ana Dulce
-
 https://github.com/renan-asantos/tutorial-evoluindo-sistema
 
-(inserir imagem do repo no github)
+![](imagens/repo-github.png)
+
+<!--
+- Para essa oficina vamos usar a base do projeto que foi feito ontem na oficina de FastAPI da Ana Dulce
+-->
 
 ---
 
@@ -211,12 +205,6 @@ https://github.com/renan-asantos/tutorial-evoluindo-sistema
 
 ![w:1100 center](imagens/replit-github.png)
 
-
----
-
-# Configuração replit
-
-(inserir imagem do replit com projeto clonado)
 (lembrar de alterar arquivo .replit)
 
 ---
@@ -293,6 +281,8 @@ AVISAR SOBRE LIMITE REPLIT
 
 - Acessar /docs, ver o swagger e chamar um dos endpoints com sucesso (cadastrar um filme e um genero e retornar eles)
 
+![w:1100 center](imagens/swagger-projeto.png)
+
 <!--
 - então é isso, já ta pronto e funcional, fazendo sua atividade fim
 - agora vamos melhorar as "bordas" dele
@@ -349,10 +339,10 @@ mas é um bom conhecimento para dizer que já fez um dia
 
 ---
 
-(gráfico de visualizacao do banco se der)
-Para poder documentar o sistema, é bom entender minimamente o que ele faz
+# Documentação
 
-(Ana explica explica minimamente o que o projeto faz e quais os endpoints, como o banco está estruturado etc)
+- Entendimento do sistema
+- Criação de uma documentação simples
 
 ---
 
@@ -489,10 +479,6 @@ Assim, precisamos de logs
 
 # Testes
 
-- Focar só em unitario ou abranger de integração tbm?
-- Pytest
-- Falar de mock
-- Usar padrão AAA (Arrange, Act, Assert)
 - Como fazer um bom teste?
 
 ---
@@ -575,37 +561,41 @@ Assim, precisamos de logs
 
 # Ruff
 
-
-
----
-
-# Automações (centralizado)
+![center](imagens/ruff-linter.png)
 
 ---
 
-# Automatizando comandos no nosso sistema
+# Em que passo estamos?
+
+<div class="columns">
+<div>
+
+1. ~~configuração do ambiente~~
+2. ~~documentação~~
+3. ~~logs~~
+4. ~~testes~~
+
+</div>
+<div>
+
+5. ~~formatadores automáticos~~
+6. ~~análise estática~~
+7. <span style="color:black">automação de comandos</span>
+8. automação com git hooks
+
+</div>
+</div>
+
+---
+
+# Automatizando comandos
 
 - O que são?
 - No que contribuem para o nosso sistema?
 
 ---
 
-# Automatizando comandos no nosso sistema
+# Automação com git hooks
 
 - O que são?
 - No que contribuem para o nosso sistema?
-
----
-
-
-
-
-<!-- --
-
-https://github.com/dunossauro/fastapi-do-zero/tree/main/slides
-
-https://dev.to/andyhaskell/write-your-tech-talk-slides-rapidly-with-marp-2c7g
-
-https://stackoverflow.com/questions/69154809/how-to-align-image-below-text-header-in-marp-or-marpit
-
--->

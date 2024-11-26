@@ -19,6 +19,7 @@ alembic = "^1.14.0"
 [tool.poetry.group.dev.dependencies]
 mkdocs = "^1.6.1"
 ruff = "^0.8.0"
+taskipy = "^1.14.0"
 
 [tool.ruff]
 line-length = 79
@@ -32,6 +33,12 @@ indent-style = "space"
 [tool.ruff.lint]
 select = ['F', 'E', 'W', 'PL', 'N']
 fixable = ["ALL"]
+
+[tool.taskipy.tasks]
+run = 'fastapi dev src/app.py'
+lint = 'ruff check .; ruff check . --diff'
+format = 'ruff check . --fix; ruff format .'
+test = 'pytest -s -x --cov=fast_zero -vv'
 
 [build-system]
 requires = ["poetry-core"]
