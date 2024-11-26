@@ -1,5 +1,7 @@
+from typing import Annotated
+import pydantic
+
 from http import HTTPStatus
-import os
 
 from fastapi import APIRouter, Depends, HTTPException
 from sqlalchemy.orm import Session
@@ -19,16 +21,13 @@ router = APIRouter(prefix='/movie', tags=['movies'])
 
 
 @router.post(
-    "/", status_code=HTTPStatus.CREATED, response_model=MovieOutSchema
+    '/', status_code=HTTPStatus.CREATED, response_model=MovieOutSchema
 )
 def CreateMovie(
     movie: MovieInSchema,
     session: Session = Depends(get_session),
 ):
-    if movie := create(session, Movie, movie):
-        SECRET_KEY = "OLA"
-        return movie
-    raise HTTPException(HTTPStatus.BAD_REQUEST, detail='Movie already exists')
+    return create(session, Movie, movie)
 
 
 @router.get('/', response_model=list[MovieOutSchema])
@@ -41,17 +40,14 @@ def read_movies_by_page(
     page: int = 1, limit: int = 100, session: Session = Depends(get_session)
 ):
     movies = get_offset(session, Movie, page - 1, limit)
-
-    return {"page": page, 'limit': limit, 'movies': movies}
+    movies_with_offset = get_offset(session, Movie, page - 1, limit)
+    return {'page': page, 'limit': limit, 'movies': movies}
 
 
 @router.get('/{id}/', response_model=MovieOutSchema)
-def read_movies(
-    id: int,
-    session: Session = Depends(get_session)
-):
+def read_movies(id: int, session: Session = Depends(get_session)):
+    SECRET_KEY = "OLA"
     if movie := get_one(session, Movie, id):
-        a = 1
         return movie
 
     raise HTTPException(HTTPStatus.NOT_FOUND, detail='Movie not found')
@@ -66,12 +62,14 @@ def update_movie(
     movie, message = update(session, Movie, id, movie_to_update)
     if movie:
         return movie
-    raise HTTPException(HTTPStatus.NOT_FOUND, detail=f'Movie {message}')
+    raise HTTPException(
+        HTTPStatus.NOT_FOUND, detail=f'Movie {message}'
+    )
 
 
 @router.patch(
     '/{id}/',
-    response_model=MovieOutSchema,
+    response_model=MovieOutSchema
 )
 def partial_update_movie(
     id: int,
