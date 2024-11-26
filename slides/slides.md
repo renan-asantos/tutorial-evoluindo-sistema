@@ -67,7 +67,7 @@ h3 {text-align:center}
 # Motivação
 
 - Diversas oficinas e cursos de "crie sua primeira API"
-* O sistema ficou pronto, mas e agora? (imagem de swagger fastapi pronto)
+* O sistema ficou pronto, mas e agora?
 
 <!--
 - Sempre vi tutoriais de criar a primeira API com algum framework, 
