@@ -18,7 +18,7 @@ router = APIRouter(prefix='/movie', tags=['movies'])
 
 
 @router.post(
-    '/', status_code=HTTPStatus.CREATED, response_model=MovieOutSchema
+    "/", status_code=HTTPStatus.CREATED, response_model=MovieOutSchema
 )
 def create_movie(
     movie: MovieInSchema,
@@ -40,11 +40,14 @@ def read_movies_by_page(
 ):
     movies = get_offset(session, Movie, page - 1, limit)
 
-    return {'page': page, 'limit': limit, 'movies': movies}
+    return {"page": page, 'limit': limit, 'movies': movies}
 
 
 @router.get('/{id}/', response_model=MovieOutSchema)
-def read_movies(id: int, session: Session = Depends(get_session)):
+def read_movies(
+    id: int,
+    session: Session = Depends(get_session)
+):
     if movie := get_one(session, Movie, id):
         return movie
 

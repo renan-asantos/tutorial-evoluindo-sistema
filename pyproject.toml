@@ -18,6 +18,16 @@ alembic = "^1.14.0"
 
 [tool.poetry.group.dev.dependencies]
 mkdocs = "^1.6.1"
+ruff = "^0.8.0"
+
+[tool.ruff]
+line-length = 79
+indent-width = 4
+extend-exclude = ['migrations']
+
+[tool.ruff.format]
+quote-style = "single"
+indent-style = "space"
 
 [build-system]
 requires = ["poetry-core"]

@@ -424,11 +424,15 @@ Assim, precisamos de logs
 
 # Logs
 
-- `poetry add loguru`
-
 <style scoped> img {margin-top: 80px} </style>
 
 ![w:1000 center](imagens/loguru-logo.png)
+
+---
+
+# Logs
+
+- Adicionar logs...
 
 ---
 
@@ -459,7 +463,7 @@ Assim, precisamos de logs
 
 - Software é uma construção complexa
 - Logo, está sujeita a erros
-- Assim, foram criados os testes para minimizar que os erros cheguem ao usuário
+- Assim, foram criados testes para minimizar que erros cheguem ao usuário
 
 ---
 
@@ -516,10 +520,35 @@ Assim, precisamos de logs
 
 ---
 
+# "Estilos" de código
+
+- Pessoas programam com "estilos" diferentes
+- O código vai funcionar de um jeito ou de outro, mas possuem diferenças estéticas
+  - Ordem de imports
+  - **"** ou **'**?
+  - Quebra de linhas diferentes
+  - Tamanhos de linha sem padrão
+  - ...
+
+---
+
+![](imagens/pep8.png)
+
+---
+
 # Formatadores automáticos
 
-- O que são?
-- No que contribuem para o nosso sistema?
+- É uma boa prática definir um padrão para o estilo de escrita de código
+  - legibilidade
+  - acessibilidade
+- Garantimos esse estilo com formatadores automáticos
+
+---
+
+# Ruff
+
+(carbon install ruff dev)
+
 
 ---
 
