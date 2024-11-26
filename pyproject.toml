@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "tutorial-evoluindo-sistema"
+version = "0.1.0"
+description = ""
+authors = [
+    "Renan <renan_assis97@hotmail.com>",
+    "Ana Dulce <anadulcepadovan@gmail.com>"
+]
+readme = "README.md"
+package-mode = false
+
+[tool.poetry.dependencies]
+python = "^3.11"
+fastapi = {extras = ["standard"], version = "^0.112.0"}
+sqlalchemy = "^2.0.36"
+pydantic-settings = "^2.6.1"
+alembic = "^1.14.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
