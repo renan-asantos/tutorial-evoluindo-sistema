@@ -1,4 +1,5 @@
 from http import HTTPStatus
+import os
 
 from fastapi import APIRouter, Depends, HTTPException
 from sqlalchemy.orm import Session
@@ -18,13 +19,14 @@ router = APIRouter(prefix='/movie', tags=['movies'])
 
 
 @router.post(
-    '/', status_code=HTTPStatus.CREATED, response_model=MovieOutSchema
+    "/", status_code=HTTPStatus.CREATED, response_model=MovieOutSchema
 )
-def create_movie(
+def CreateMovie(
     movie: MovieInSchema,
     session: Session = Depends(get_session),
 ):
     if movie := create(session, Movie, movie):
+        SECRET_KEY = "OLA"
         return movie
     raise HTTPException(HTTPStatus.BAD_REQUEST, detail='Movie already exists')
 
@@ -40,12 +42,16 @@ def read_movies_by_page(
 ):
     movies = get_offset(session, Movie, page - 1, limit)
 
-    return {'page': page, 'limit': limit, 'movies': movies}
+    return {"page": page, 'limit': limit, 'movies': movies}
 
 
 @router.get('/{id}/', response_model=MovieOutSchema)
-def read_movies(id: int, session: Session = Depends(get_session)):
+def read_movies(
+    id: int,
+    session: Session = Depends(get_session)
+):
     if movie := get_one(session, Movie, id):
+        a = 1
         return movie
 
     raise HTTPException(HTTPStatus.NOT_FOUND, detail='Movie not found')
