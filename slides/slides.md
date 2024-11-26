@@ -563,6 +563,8 @@ Assim, precisamos de logs
 
 ![center](imagens/ruff-linter.png)
 
+- Cada um escolher uma regra para infligir
+
 ---
 
 # Em que passo estamos?
@@ -590,8 +592,43 @@ Assim, precisamos de logs
 
 # Automatizando comandos
 
-- O que são?
-- No que contribuem para o nosso sistema?
+- Rodamos muitos comandos ao longo da curso
+- Poderíamos criar comandos mais simples e fáceis de lembrar...
+- Algumas bibliotecas nos ajudam nisso:
+  - https://github.com/taskipy/taskipy
+  - https://github.com/nat-n/poethepoet
+  - https://github.com/pyinvoke/invoke
+
+---
+
+# Em que passo estamos?
+
+<div class="columns">
+<div>
+
+1. ~~configuração do ambiente~~
+2. ~~documentação~~
+3. ~~logs~~
+4. ~~testes~~
+
+</div>
+<div>
+
+5. ~~formatadores automáticos~~
+6. ~~análise estática~~
+7. ~~automação de comandos~~
+8. <span style="color:black">automação com git hooks</span>
+
+</div>
+</div>
+
+---
+
+# Git
+
+- Ferramenta de controle de versão 
+
+![w:1000 center](imagens/git.png)
 
 ---
 

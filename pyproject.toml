@@ -36,8 +36,8 @@ fixable = ["ALL"]
 
 [tool.taskipy.tasks]
 run = 'fastapi dev src/app.py'
-lint = 'ruff check .; ruff check . --diff'
-format = 'ruff check . --fix; ruff format .'
+lint = 'ruff check --fix --show-fixes'
+format = 'ruff check --select I --fix && ruff format'
 test = 'pytest -s -x --cov=fast_zero -vv'
 
 [build-system]
